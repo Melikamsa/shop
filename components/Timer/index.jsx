@@ -1,5 +1,7 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
+import "@/styles/components/Timer.scss";
 import { useState, useEffect } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 
@@ -31,13 +33,20 @@ const Timer = ({ duration }) => {
   };
 
   return (
-    <section className="bg-slate-400 p-11">
-      <section>
-        <section>
-          <div>{timers}</div>
+    <section className="boxMonth m-11 gap-2">
+      <section className="boxRight gap-5">
+        <section className="texts gap-3">
+          <h2 className="font-bold text-xl xl:text-2xl">deals of the month</h2>
+          <p className="xl:text-lg">
+            it is a long established fact that a reader will be distracted by
+            the readable content of a page when looking at its layout. the point
+            of using lorem ipsum is that it has a more-or-less normal
+            distribution of letters.
+          </p>
+          <div className="timer text-xl font-bold">{timers}</div>
         </section>
-        {/* <Link href="/">
-          <div className="text-white mt-3 bg-black flex items-center justify-between rounded-lg py-[5px] px-3 w-[120px] lg:w-[150px] 2xl:w-[200px]">
+        <Link href="/">
+          <div className="boxBtn py-3 px-3">
             <button className="pb-1.5 lg:text-xl  2xl:text-2xl capitalize">
               view all products
             </button>
@@ -45,20 +54,19 @@ const Timer = ({ duration }) => {
               <FaArrowRightLong />
             </span>
           </div>
-        </Link> */}
+        </Link>
       </section>
+      <div className="max-sm:hidden w-[40%]">
+        <Image
+          src="/1.png"
+          width={0}
+          height={0}
+          sizes="100vw"
+          style={{ width: "100%" }}
+        />
+      </div>
     </section>
   );
 };
 
 export default Timer;
-
-{
-  /* <h2>deals of the month</h2>
-        <p>
-          it is a long established fact that a reader will be distracted by the
-          readable content of a page when looking at its layout. the point of
-          using lorem ipsum is that it has a more-or-less normal distribution of
-          letters.
-        </p> */
-}

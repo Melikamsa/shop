@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import Accordion from "../Accordion";
 import {
   GrLocation,
   GrPhone,
@@ -9,15 +10,12 @@ import {
   GrLinkNext,
   GrInstagram,
   GrDown,
-  GrFormUp,
 } from "react-icons/gr";
 import { FiTwitter, FiFacebook } from "react-icons/fi";
 
 const Footer = () => {
   const [showInformation, setShowInformation] = useState(false);
   const [showService, setShowService] = useState(false);
-
-  // const { showIcon, setShowIcon } = useState(false);
 
   return (
     <section className="bg-black">
@@ -48,7 +46,6 @@ const Footer = () => {
             <span>3891 ranchview dr. richardson, california 62639</span>
           </div>
         </section>
-
         <section className="lg:h-[225px] max-lg:mb-11">
           <div className="flex items-center justify-between mb-4 ">
             <p className="font-bold text-lg">information</p>
@@ -56,15 +53,12 @@ const Footer = () => {
               className="text-xl lg:hidden cursor-pointer"
               onClick={() => {
                 setShowInformation(true);
-                // setShowIcon(true);
-                // console.log(setShowIcon);
                 console.log("click");
               }}
             >
               <GrDown />
             </span>
           </div>
-          {/* {showIcon ? <GrFormUp /> : null} */}
           {showInformation ? (
             <ul className="h-[225px] flex flex-col justify-between ">
               <li>
@@ -103,7 +97,6 @@ const Footer = () => {
             </li>
           </ul>
         </section>
-
         <section className="lg:h-[225px] max-lg:mb-11">
           <div
             className="flex items-center justify-between cursor-pointer mb-4 "
@@ -155,7 +148,7 @@ const Footer = () => {
             </li>
           </ul>
         </section>
-
+        ;
         <section className="lg:w-[25%] lg:h-[225px] flex flex-col justify-between gap-8 lg:gap-0  max-lg:mb-6">
           <p className="font-bold text-lg">subscribe</p>
           <span>

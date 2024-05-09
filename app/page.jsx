@@ -1,11 +1,12 @@
 import "@/styles/globals.css";
 import Header from "../components/Header/index";
 import Footer from "../components/Footer/index";
+import PostInstagram from "../components/PostInstagram/index";
 import Information from "@/components/Information";
 import Image from "next/image";
 import Link from "next/link";
 import Timer from "@/components/Timer";
-import { FaArrowRightLong, FaInstagram } from "react-icons/fa6";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const HomePage = () => {
   return (
@@ -48,46 +49,7 @@ const HomePage = () => {
       </section>
 
       <Timer duration={113 * 24 * 60 * 60 * 1000} />
-
-      <section className="px-11 py-7">
-        <h2 className="text-center text-xl my-6 xl:text-2xl">
-          our instagram posts
-        </h2>
-        <div className="flex flex-col items-center justify-between gap-5 sm:flex-row ">
-          <Link className="hover:blur-[2px]" href="/">
-            <Image
-              src="/instagramPost/12.png"
-              alt="instagram Post"
-              width={300}
-              height={300}
-            />
-          </Link>
-          <Link href="/">
-            <Image
-              src="/instagramPost/34.png"
-              alt="instagram Post"
-              width={300}
-              height={300}
-            />
-          </Link>
-          <Link href="/">
-            <Image
-              src="/instagramPost/56.png"
-              alt="instagram Post"
-              width={300}
-              height={300}
-            />
-          </Link>
-          <Link href="/">
-            <Image
-              src="/instagramPost/Rectangle 12348.png"
-              alt="instagram Post"
-              width={300}
-              height={300}
-            />
-          </Link>
-        </div>
-      </section>
+      <PostInstagram />
       <Information />
       <Footer />
     </>

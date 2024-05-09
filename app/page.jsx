@@ -11,8 +11,8 @@ import { FaArrowRightLong } from "react-icons/fa6";
 const HomePage = () => {
   return (
     <>
-      <Header />
-      <section>
+      {/* <Header /> */}
+      {/* <section>
         <div className="relative">
           <Image
             src="/home.png"
@@ -46,7 +46,7 @@ const HomePage = () => {
             </div>
           </Link>
         </div>
-      </section>
+      </section> */}
 
       <Timer duration={113 * 24 * 60 * 60 * 1000} />
       <PostInstagram />

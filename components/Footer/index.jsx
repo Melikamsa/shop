@@ -148,7 +148,7 @@ const Footer = () => {
             </li>
           </ul>
         </section>
-        ;
+
         <section className="lg:w-[25%] lg:h-[225px] flex flex-col justify-between gap-8 lg:gap-0  max-lg:mb-6">
           <p className="font-bold text-lg">subscribe</p>
           <span>

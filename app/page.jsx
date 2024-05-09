@@ -11,7 +11,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 const HomePage = () => {
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       {/* <section>
         <div className="relative">
           <Image

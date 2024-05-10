@@ -1,14 +1,25 @@
+import Link from "next/link";
 import React from "react";
 
 const Shop = () => {
   return (
-    <div>
+    <div className="w-[35%] bg-amber-200 ml-16">
       <ul>
-        <li>men</li>
-        <li>women</li>
-        <li>kids</li>
-        <li>bags</li>
-        <li>shoes</li>
+        <Link href="/">
+          <li>men</li>
+        </Link>
+        <Link href="/">
+          <li>women</li>
+        </Link>
+        <Link href="/">
+          <li>kids</li>
+        </Link>
+        <Link href="/">
+          <li>bags</li>
+        </Link>
+        <Link href="/">
+          <li>shoes</li>
+        </Link>
       </ul>
     </div>
   );

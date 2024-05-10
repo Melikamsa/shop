@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import Shop from "../Shop";
 import { GrClose } from "react-icons/gr";
 import { PiCaretDownBold } from "react-icons/pi";
 
@@ -32,10 +34,17 @@ const HamburgerMenu = ({ setShow }) => {
             <li>
               <Link href="/">home</Link>
             </li>
-            <li className="flex items-center  gap-2">
-            <Link href="/">shop</Link>
-            <PiCaretDownBold className="mt-2" />
-          </li>
+
+            <li
+              className="flex items-center gap-2 cursor-pointer"
+              onClick={() => {
+                console.log("click shod");
+              }}
+            >
+              <Link href="/">shop</Link>
+              <PiCaretDownBold className="mt-2" />
+            </li>
+            <Shop />
             <li>
               <Link href="/">our story</Link>
             </li>

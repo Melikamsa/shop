@@ -12,8 +12,8 @@ const HomePage = () => {
   return (
     <>
       <Header />
-      {/* <section>
-        <div className="relative">
+      <section>
+        <div>
           <Image
             src="/home.png"
             width={0}
@@ -46,7 +46,7 @@ const HomePage = () => {
             </div>
           </Link>
         </div>
-      </section> */}
+      </section>
 
       <Timer duration={113 * 24 * 60 * 60 * 1000} />
       <PostInstagram />

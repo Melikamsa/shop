@@ -1,17 +1,17 @@
-// @layer component {
-//   .header {
-//     @apply ;
-//   }
+@layer component {
+  .header {
+    @apply flex items-center justify-between;
+  }
 
-//   .header .menu {
-//     @apply ;
-//   }
+  .header .menu {
+    @apply max-md:hidden flex items-center justify-between gap-6 lg:gap-10 lg:text-xl xl:text-2xl;
+  }
 
-//   .header .left {
-//     @apply ;
-//   }
+  .header .left {
+    @apply flex items-center gap-2 lg:gap-5;
+  }
 
-//   .header .left .icons {
-//     @apply ;
-//   }
-// }
+  .header .left .icons {
+    @apply max-sm:hidden text-3xl 2xl:text-4xl flex items-center gap-2 lg:gap-3;
+  }
+}

@@ -3,22 +3,31 @@ import React from "react";
 
 const Shop = () => {
   return (
-    <div className="w-[35%] bg-amber-200 ml-16">
-      <ul>
+    <div className="p-3 rounded-lg bg-black text-white absolute">
+      <ul className="flex flex-col gap-4">
         <Link href="/">
-          <li>men</li>
+          <li>jewellery</li>
+        </Link>
+        <Link href="/">
+          <li>Bracelets</li>
+        </Link>
+        <Link href="/">
+          <li>hat</li>
+        </Link>
+        <Link href="/">
+          <li>Belts</li>
         </Link>
         <Link href="/">
           <li>women</li>
         </Link>
         <Link href="/">
-          <li>kids</li>
+          <li>bag</li>
         </Link>
         <Link href="/">
-          <li>bags</li>
+          <li>boot</li>
         </Link>
         <Link href="/">
-          <li>shoes</li>
+          <li>Jean</li>
         </Link>
       </ul>
     </div>

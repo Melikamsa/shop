@@ -6,32 +6,49 @@ import Link from "next/link";
 import Image from "next/image";
 import Shop from "./Shop";
 import { useState } from "react";
+import Accordion from "../Accordion";
+import "@/styles/components/Header.scss";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [showShop, setShowShop] = useState(false);
 
   return (
-    <section className="header flex items-center justify-between py-5 px-3 lg:px-6">
+    <section className="header py-5 px-3 lg:px-6">
       <Link href="/">
         <Image src="/LogoTextBlack.png" alt="logo" width={120} height={110} />
       </Link>
 
-      <ul className="menu max-md:hidden flex items-center justify-between gap-6 lg:gap-10 lg:text-xl xl:text-2xl">
+      <ul className="menu">
         <li>
           <Link href="/">home</Link>
         </li>
-        <li
-          className="flex items-center gap-1 cursor-pointer"
-          onClick={() => {
-            setShowShop(true);
-            console.log("click shod");
-          }}
-        >
-          <Link href="/">shop</Link>
-          <PiCaretDownBold className="mt-1" />
-        </li>
-        {showShop ? <Shop setShow={setShowShop} /> : null}
+
+        <section>
+          <Accordion
+            isOpenStatus={setShowShop}
+            AccordionHeader={
+              <li
+                className="flex items-center gap-1 cursor-pointer "
+                onClick={() => {
+                  setShowShop(true);
+                  console.log("click shod");
+                }}
+              >
+                <Link href="/">shop</Link>
+                <span className={`mt-1 ${showShop ? "rotate-180" : ""}`}>
+                  <PiCaretDownBold />
+                </span>
+              </li>
+            }
+          >
+            {showShop ? (
+              <div className="absolute top-12">
+                <Shop setShow={setShowShop} />
+              </div>
+            ) : null}
+          </Accordion>
+        </section>
 
         <li>
           <Link href="/">our story</Link>
@@ -44,8 +61,8 @@ const Header = () => {
         </li>
       </ul>
 
-      <section className="left flex items-center gap-2 lg:gap-5">
-        <div className="icons max-sm:hidden text-2xl xl:text-3xl flex items-center gap-2 lg:gap-3">
+      <section className="left ">
+        <div className="icons ">
           <button>
             <PiShoppingBag />
           </button>

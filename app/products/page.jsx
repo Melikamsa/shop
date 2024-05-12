@@ -6,7 +6,7 @@ const Products = () => {
   const [product, setProduct] = useState([]);
 
   useEffect(() => {
-    fetch("https://api.escuelajs.co/api/v1/products")
+    fetch("https://6638e1b44253a866a24f88d2.mockapi.io/products")
       .then((Response) => Response.json())
       .then((Result) => setProduct(Result))
       .catch((err) => console.log(err));
@@ -17,7 +17,11 @@ const Products = () => {
       {product.map((data) => {
         return (
           <>
-            <Image width={320} height={320} alt={"img"} src={data.image} />
+          <p>{data.title}</p>
+          <p>{data.price} $</p>
+          <p>{data.colors}</p>
+
+            <Image width={320} height={320} alt={"img"} src={data.images} />
           </>
         );
       })}

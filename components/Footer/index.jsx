@@ -103,7 +103,7 @@ const Footer = () => {
                 <Link href="/">my cart</Link>
               </li>
               <li>
-                <Link href="/">ma wishlist</Link>
+                <Link href="/">mawishlist</Link>
               </li>
               <li>
                 <Link href="/">chwckout</Link>

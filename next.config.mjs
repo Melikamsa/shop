@@ -4,7 +4,7 @@ const nextConfig = {
   experimental: { appDir: true },
 
   images: {
-    domains: ["fakestoreapi.com"],
+    domains: ["www.irisfashion.co.uk"],
   },
 };
 

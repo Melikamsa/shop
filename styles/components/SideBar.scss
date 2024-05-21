@@ -1,0 +1,13 @@
+@layer component {
+  .subset {
+    @apply text-neutral-500 flex flex-col gap-4 w-[10%];
+  }
+
+  .headerList {
+    @apply flex items-center justify-between cursor-pointer gap-3;
+  }
+
+  .sideBar {
+    @apply w-[300px] bg-black rounded-lg text-white;
+  }
+}

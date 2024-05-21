@@ -45,7 +45,7 @@ const Timer = ({ duration }) => {
           </p>
           <div className="timer text-xl font-bold">{timers}</div>
         </section>
-        <Link href="/">
+        <Link href="/products">
           <div className="boxBtn py-3 px-3">
             <button className="pb-1.5 lg:text-xl  2xl:text-2xl capitalize">
               view all products

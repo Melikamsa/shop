@@ -28,7 +28,7 @@ const SopNow = () => {
           upto 40% off
         </p>
 
-        <Link href="/">
+        <Link href={`/products`}>
           <div className="text-white mt-3 bg-black flex items-center justify-between rounded-lg py-[5px] px-3 w-[120px] lg:w-[150px] 2xl:w-[200px]">
             <button className="pb-1.5 lg:text-xl  2xl:text-2xl capitalize">
               shop now

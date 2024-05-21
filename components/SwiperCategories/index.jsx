@@ -1,35 +1,128 @@
-// // import Swiper core and required modules
+"use client";
+import React, { useRef, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination } from "swiper/modules";
+import Link from "next/link";
+import Image from "next/image";
 
-// "use client"
-// import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+export default function SwiperCategories() {
+  return (
+    <>
+      <Swiper
+        slidesPerView={4}
+        spaceBetween={20}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Pagination]}
+        className="text-center px-5 py-11"
+      >
+        <SwiperSlide className="sm:bg-zinc-400 rounded-lg sm:p-2 md:text-xl xl:text-2xl xl:p-7">
+          <Link href="/">
+            <Image
+              className="mb-2 rounded-lg"
+              alt="img"
+              width={300}
+              height={300}
+              src="https://www.irisfashion.co.uk/cdn/shop/files/a4e20cfb06e3e2e6f0e788225ca4aa75_768x.jpg?v=1715742546"
+            />
+            <span>Jean</span>
+          </Link>
+        </SwiperSlide>
 
-// import { Swiper, SwiperSlide } from "swiper/react";
+        <SwiperSlide className="sm:bg-zinc-400 rounded-lg sm:p-2 md:text-xl xl:text-2xl xl:p-7">
+          <Link href="/">
+            <Image
+              className="mb-2 rounded-lg"
+              alt="img"
+              width={300}
+              height={300}
+              src="https://www.irisfashion.co.uk/cdn/shop/products/1c4fbb679604cf67ae5b6b3bd9e78f8d_768x.jpg?v=1707266631"
+            />
+            <span className="">boot</span>
+          </Link>
+        </SwiperSlide>
 
-// // // Import Swiper styles
-// // import "swiper/css";
-// // import "swiper/css/navigation";
-// // import "swiper/css/pagination";
-// // import "swiper/css/scrollbar";
+        <SwiperSlide className="sm:bg-zinc-400 rounded-lg sm:p-2 md:text-xl xl:text-2xl xl:p-7">
+          <Link href="/">
+            <Image
+              className="mb-2 rounded-lg"
+              alt="img"
+              width={300}
+              height={300}
+              src="https://www.irisfashion.co.uk/cdn/shop/products/c1e4793f4acc1d5bbb56816ed5189358_768x.jpg?v=1708476798"
+            />
+            <span className="">bag</span>
+          </Link>
+        </SwiperSlide>
 
-// const SwiperCategories = () => {
-//   return (
-//     <Swiper
-//       // install Swiper modules
-//       modules={[Navigation, Pagination, Scrollbar, A11y]}
-//       spaceBetween={50}
-//       slidesPerView={3}
-//       navigation
-//       pagination={{ clickable: true }}
-//       scrollbar={{ draggable: true }}
-//       onSwiper={(swiper) => console.log(swiper)}
-//       onSlideChange={() => console.log("slide change")}
-//     >
-//       <SwiperSlide>Slide 1</SwiperSlide>
-//       <SwiperSlide>Slide 2</SwiperSlide>
-//       <SwiperSlide>Slide 3</SwiperSlide>
-//       <SwiperSlide>Slide 4</SwiperSlide>
-//       ...
-//     </Swiper>
-//   );
-// };
-// export default SwiperCategories;
+        <SwiperSlide className="sm:bg-zinc-400 rounded-lg sm:p-2 md:text-xl xl:text-2xl xl:p-7">
+          <Link href="/">
+            <Image
+              className="mb-2 rounded-lg"
+              alt="img"
+              width={300}
+              height={300}
+              src="https://www.irisfashion.co.uk/cdn/shop/products/f090b87e4843a7cafa442d75e76ad2a8_480x.jpg?v=1676074178"
+            />
+            <span className="">Belts</span>
+          </Link>
+        </SwiperSlide>
+
+        <SwiperSlide className="sm:bg-zinc-400 rounded-lg sm:p-2 md:text-xl xl:text-2xl xl:p-7">
+          <Link href="/">
+            <Image
+              className="mb-2 rounded-lg"
+              alt="img"
+              width={300}
+              height={300}
+              src="https://www.irisfashion.co.uk/cdn/shop/files/1af6e1e7ed6da4e2108845d9aeb62362_480x.jpg?v=1714704103"
+            />
+            <span className="">women</span>
+          </Link>
+        </SwiperSlide>
+
+        <SwiperSlide className="sm:bg-zinc-400 rounded-lg sm:p-2 md:text-xl xl:text-2xl xl:p-7">
+          <Link href="/">
+            <Image
+              className="mb-2 rounded-lg"
+              alt="img"
+              width={300}
+              height={300}
+              src="https://www.irisfashion.co.uk/cdn/shop/products/2d531a47164226d3923be5bff7deb297_768x.jpg?v=1663495571"
+            />
+            <span className="">jewellery</span>
+          </Link>
+        </SwiperSlide>
+
+        <SwiperSlide className="sm:bg-zinc-400 rounded-lg sm:p-2 md:text-xl xl:text-2xl xl:p-7">
+          <Link href="/">
+            <Image
+              className="mb-2 rounded-lg"
+              alt="img"
+              width={300}
+              height={300}
+              src="https://www.irisfashion.co.uk/cdn/shop/products/2cdf606975e2f648dede0bdc1ef97773_480x.jpg?v=1663492808"
+            />
+            <span className="">Bracelets</span>
+          </Link>
+        </SwiperSlide>
+
+        <SwiperSlide className="sm:bg-zinc-400 rounded-lg sm:p-2 md:text-xl xl:text-2xl xl:p-7">
+          <Link href="/">
+            <Image
+              className="mb-2 rounded-lg"
+              alt="img"
+              width={300}
+              height={300}
+              src="https://www.irisfashion.co.uk/cdn/shop/products/0ec80e26db1ae8e6a885dc72a56e90a6_768x.jpg?v=1696638207"
+            />
+            <span className="">hat</span>
+          </Link>
+        </SwiperSlide>
+      </Swiper>
+    </>
+  );
+}

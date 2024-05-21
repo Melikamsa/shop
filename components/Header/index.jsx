@@ -36,7 +36,11 @@ const Header = () => {
                 }}
               >
                 <Link href="/">shop</Link>
-                <span className={`mt-1 ${showShop ? "rotate-180" : ""}`}>
+                <span
+                  className={`mt-1 lg:mt-2 xl:mt-3 ${
+                    showShop ? "rotate-180" : ""
+                  }`}
+                >
                   <PiCaretDownBold />
                 </span>
               </li>
@@ -82,9 +86,11 @@ const Header = () => {
         </button>
         {showMenu ? <HamburgerMenu setShow={setShowMenu} /> : null}
 
-        <button className="text-white bg-black pb-2 pt-1 px-5 lg:pb-4 lg:pt-2 lg:px-7 2xl:pb-5 2xl:pt-3 2xl:px-9 rounded-lg capitalize  lg:text-xl 2xl:text-2xl">
-          login
-        </button>
+        <Link href="/login">
+          <button className="text-white bg-black pb-2 pt-1 px-5 lg:pb-4 lg:pt-2 lg:px-7 2xl:pb-5 2xl:pt-3 2xl:px-9 rounded-lg capitalize  lg:text-xl 2xl:text-2xl">
+            login
+          </button>
+        </Link>
       </section>
     </section>
   );

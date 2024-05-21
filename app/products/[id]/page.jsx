@@ -9,6 +9,7 @@ import { FaMinus, FaPlus, FaRegHeart } from "react-icons/fa6";
 import Footer from "@/components/Footer";
 import Information from "@/components/Information";
 import RelatedProducts from "@/components/RelatedProducts";
+import AddReview from "@/components/AddYourReview";
 
 const product = () => {
   const params = useParams();
@@ -117,7 +118,7 @@ const product = () => {
           </section>
         </section>
       </section>
-
+<AddReview/>
       <RelatedProducts />
       <Information />
       <Footer />

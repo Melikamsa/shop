@@ -1,0 +1,14 @@
+@layer component {
+  .boxMonth {
+    @apply flex items-center justify-between gap-2 sm:h-[350px] md:h-[300px] lg:h-[400px] min-[1400px]:h-[420px];
+  }
+  .boxRight {
+    @apply flex flex-col lg:gap-7 sm:w-[55%];
+  }
+  .texts {
+    @apply flex flex-col lg:gap-5;
+  }
+  .boxBtn {
+    @apply text-white bg-black flex items-center justify-between  rounded-lg  w-[200px] lg:w-[250px] 2xl:w-[300px];
+  }
+}/*# sourceMappingURL=Timer.css.map */

@@ -20,7 +20,7 @@ export default function SwiperCategories() {
         className="text-center px-5 py-11"
       >
         <SwiperSlide className="sm:bg-zinc-400 rounded-lg sm:p-2 md:text-xl xl:text-2xl xl:p-7">
-          <Link href="/">
+          <Link href="/categoreis/jean">
             <Image
               className="mb-2 rounded-lg"
               alt="img"
@@ -33,7 +33,7 @@ export default function SwiperCategories() {
         </SwiperSlide>
 
         <SwiperSlide className="sm:bg-zinc-400 rounded-lg sm:p-2 md:text-xl xl:text-2xl xl:p-7">
-          <Link href="/">
+          <Link href="/categoreis/boot">
             <Image
               className="mb-2 rounded-lg"
               alt="img"
@@ -46,7 +46,7 @@ export default function SwiperCategories() {
         </SwiperSlide>
 
         <SwiperSlide className="sm:bg-zinc-400 rounded-lg sm:p-2 md:text-xl xl:text-2xl xl:p-7">
-          <Link href="/">
+          <Link href="/categoreis/bag">
             <Image
               className="mb-2 rounded-lg"
               alt="img"
@@ -59,7 +59,7 @@ export default function SwiperCategories() {
         </SwiperSlide>
 
         <SwiperSlide className="sm:bg-zinc-400 rounded-lg sm:p-2 md:text-xl xl:text-2xl xl:p-7">
-          <Link href="/">
+          <Link href="/categoreis/Belts">
             <Image
               className="mb-2 rounded-lg"
               alt="img"
@@ -72,7 +72,7 @@ export default function SwiperCategories() {
         </SwiperSlide>
 
         <SwiperSlide className="sm:bg-zinc-400 rounded-lg sm:p-2 md:text-xl xl:text-2xl xl:p-7">
-          <Link href="/">
+          <Link href="/categoreis/women">
             <Image
               className="mb-2 rounded-lg"
               alt="img"
@@ -85,7 +85,7 @@ export default function SwiperCategories() {
         </SwiperSlide>
 
         <SwiperSlide className="sm:bg-zinc-400 rounded-lg sm:p-2 md:text-xl xl:text-2xl xl:p-7">
-          <Link href="/">
+          <Link href="/categoreis/jewellery">
             <Image
               className="mb-2 rounded-lg"
               alt="img"
@@ -98,7 +98,7 @@ export default function SwiperCategories() {
         </SwiperSlide>
 
         <SwiperSlide className="sm:bg-zinc-400 rounded-lg sm:p-2 md:text-xl xl:text-2xl xl:p-7">
-          <Link href="/">
+          <Link href="/categoreis/Bracelets">
             <Image
               className="mb-2 rounded-lg"
               alt="img"
@@ -111,7 +111,7 @@ export default function SwiperCategories() {
         </SwiperSlide>
 
         <SwiperSlide className="sm:bg-zinc-400 rounded-lg sm:p-2 md:text-xl xl:text-2xl xl:p-7">
-          <Link href="/">
+          <Link href="/categoreis/hat">
             <Image
               className="mb-2 rounded-lg"
               alt="img"
@@ -120,6 +120,19 @@ export default function SwiperCategories() {
               src="https://www.irisfashion.co.uk/cdn/shop/products/0ec80e26db1ae8e6a885dc72a56e90a6_768x.jpg?v=1696638207"
             />
             <span className="">hat</span>
+          </Link>
+        </SwiperSlide>
+
+        <SwiperSlide className="sm:bg-zinc-400 rounded-lg sm:p-2 md:text-xl xl:text-2xl xl:p-7">
+          <Link href="/categoreis/Sandal">
+            <Image
+              className="mb-2 rounded-lg"
+              alt="img"
+              width={300}
+              height={300}
+              src="https://www.irisfashion.co.uk/cdn/shop/files/6a46f6cd82c1643575bb99cd3a54d833_480x.jpg?v=1711502242"
+            />
+            <span className="">Sandal</span>
           </Link>
         </SwiperSlide>
       </Swiper>

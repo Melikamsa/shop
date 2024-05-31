@@ -1,0 +1,14 @@
+@layer component {
+  .information {
+    @apply sm:flex-wrap sm:flex sm:justify-between;
+  }
+  .information .boxs {
+    @apply flex flex-col items-center gap-2 text-center mb-2 sm:w-[49%] xl:w-[20%] 2xl:text-[20px] 2xl:gap-1 2xl:w-[24%];
+  }
+  .information .boxs .icons {
+    @apply m-auto text-2xl w-7;
+  }
+  .information .boxs .titles {
+    @apply font-bold text-lg;
+  }
+}/*# sourceMappingURL=Information.css.map */

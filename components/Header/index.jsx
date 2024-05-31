@@ -67,9 +67,12 @@ const Header = () => {
 
       <section className="left ">
         <div className="icons ">
-          <button>
-            <PiShoppingBag />
-          </button>
+          <Link href="/checkOut">
+            <button>
+              <PiShoppingBag />
+            </button>
+          </Link>
+
           <button>
             <GoSearch />
           </button>

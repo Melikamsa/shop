@@ -16,13 +16,13 @@ const OurBestseller = () => {
   const slicedItems = product.slice(-8);
 
   return (
-    <section className="px-8 sm:px-4 lg:my-10">
+    <section className="p-5">
       <h2 className="text-center text-xl xl:text-2xl my-6">Our Bestseller</h2>
 
-      <section className="  sm:flex sm:flex-wrap sm:items-center sm:justify-around">
+      <section className="  sm:flex sm:flex-wrap sm:items-center sm:justify-between">
         {slicedItems.map((item, i) => {
           return (
-            <div className=" flex flex-col items-center justify-center sm:w-[230px] gap-2 m-4 xl:text-base">
+            <div className=" flex flex-col items-center justify-center sm:w-[200px] lg:w-[240px] xl:w-[280px] gap-2 m-3 xl:text-xl ">
               <Link href={`products/${item.id}`} key={i}>
                 <Image
                   src={item.images[0]}

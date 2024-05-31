@@ -1,0 +1,41 @@
+@layer component {
+  .footerLeft {
+    @apply lg:flex lg:items-center lg:justify-between  text-white;
+  }
+  .footerLeft .boxOneAndFour {
+    @apply flex flex-col justify-between lg:w-[25%] h-[225px];
+  }
+  .textBoxLeft {
+    @apply flex items-center gap-2;
+  }
+  .titlesBoxTowAndThree {
+    @apply w-[200px] flex items-center justify-between;
+  }
+  .titles {
+    @apply font-bold text-lg cursor-pointer;
+  }
+  .titlesBoxTowAndThree .icon {
+    @apply text-xl lg:hidden cursor-pointer;
+  }
+  .minItems {
+    @apply h-[225px] flex flex-col justify-between;
+  }
+  .maxItems {
+    @apply h-[180px] flex flex-col justify-between max-lg:hidden;
+  }
+  .boxImail {
+    @apply bg-black rounded-xl flex items-center justify-around text-white;
+  }
+  input {
+    @apply bg-black w-full;
+  }
+  .bottom {
+    @apply xl:text-[20px] lg:flex lg:items-center lg:justify-between text-white;
+  }
+  .PaymentGateway {
+    @apply lg:w-[30%] flex items-center justify-center lg:justify-start;
+  }
+  .socialMedia {
+    @apply flex items-center justify-center lg:justify-end lg:w-[30%] text-xl;
+  }
+}/*# sourceMappingURL=Footer.css.map */

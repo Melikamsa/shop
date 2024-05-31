@@ -2,11 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     text-transform: capitalize;
     font-family: cursive;
+}
+
+.swiper-pagination-bullet-active{
+    background-color: #000;
 }

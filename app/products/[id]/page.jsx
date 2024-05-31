@@ -111,7 +111,7 @@ const product = () => {
               </div>
             ) : (
               <button 
-              className="bg-black text-white p-3"
+              className="bg-black text-white p-3 rounded-lg"
                 onClick={() => {
                   cartItems.find((row) => row.id === item.id) === undefined ||
                   +cartItems?.filter((row) => row.id === item.id)[0]?.count <

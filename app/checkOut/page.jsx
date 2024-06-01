@@ -19,7 +19,7 @@ const CheckOut = () => {
   return (
     <>
       {/* <Header /> */}
-      <h2>your cart items</h2>
+      <h2>welcome to check out</h2>
 
       <div>
         {console.log(product)}

@@ -1,18 +1,33 @@
 "use client";
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 export const ShopContext = createContext(null);
 export const ShopContextProvider = (props) => {
-  const [cartItems, setCartItems] = useState([]);
+  const [cartItems, setCartItems] = useState();
+
+  useEffect(() => {
+    const data = localStorage.getItem("productCart");
+    // if (data) {
+    setCartItems(!!JSON.parse(data) ? JSON.parse(data) : []);
+    // }
+  }, []);
+
+  useEffect(() => {
+    if (cartItems !== undefined)
+      localStorage.setItem("productCart", JSON.stringify(cartItems));
+  }, [cartItems]);
 
   const addToCart = (itemId) => {
     if (!cartItems?.find((item) => item.id === itemId))
       setCartItems([...cartItems, { id: itemId, count: 1 }]);
     else
       setCartItems(
-        cartItems.map((item) => {
+        cartItems?.map((item) => {
           if (item.id === itemId) {
             return { ...item, count: item.count + 1 };
           } else item;
+          console.log(item);
+          console.log(item.count);
+          console.log(cartItems);
         })
       );
   };
@@ -26,8 +41,6 @@ export const ShopContextProvider = (props) => {
       })
     );
   };
-
-  
 
   const contextValue = { cartItems, setCartItems, addToCart, removeFromCart };
   return (

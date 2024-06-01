@@ -25,7 +25,7 @@ const CheckOut = () => {
         {console.log(product)}
         {product
           .filter((item) =>
-            cartItems.find((cartItem) => cartItem.id === item.id)
+            cartItems?.find((cartItem) => cartItem.id === item.id)
           )
           .map((item) => console.log(item))}
       </div>

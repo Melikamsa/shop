@@ -29,31 +29,11 @@ const product = () => {
 
   let stock = item.in_Stock;
 
-  const isInCart = cartItems?.some((item) => item.id === item.id);
-
   return (
     <>
       <Header />
 
       <section className="my-12 flex max-md:flex-col max-md:items-center  md:justify-around">
-        {/* <section className="w-[90%] md:w-[45%] lg:w-[40%] xl:w-[35%]">
-          {item.images
-            ? Object.values(item?.images).map((img) => {
-                return (
-                  <div className="my-5">
-                    <Image
-                      src={img}
-                      width={0}
-                      height={0}
-                      sizes="100vw"
-                      style={{ width: "100%", height: "auto" }}
-                    />
-                  </div>
-                );
-              })
-            : null}
-        </section> */}
-
         <section className=" w-[90%] md:w-[45%] lg:w-[40%] xl:w-[35%] md:h-[460px] my-5 p-2 bg-[#f1eeee] flex flex-col justify-between gap-8 lg:text-lg xl:text-xl">
           <p>title : {item.title}</p>
           <p>price : {item.price} $</p>
@@ -91,12 +71,13 @@ const product = () => {
               <div className=" flex items-center border-2 border-black rounded-md gap-3 p-1 sm:p-2">
                 <button
                   onClick={() => {
-                    cartItems.find((row) => row.id === item.id) === undefined ||
+                    cartItems?.find((row) => row.id === item.id) ===
+                      undefined ||
                     +cartItems?.filter((row) => row.id === item.id)[0]?.count <
                       +item.in_Stock
                       ? addToCart(item.id)
                       : console.log(item.id);
-                    console.log(item.in_Stock);
+                    // console.log(item.in_Stock);
                   }}
                 >
                   <FaPlus />
@@ -110,10 +91,10 @@ const product = () => {
                 </button>
               </div>
             ) : (
-              <button 
-              className="bg-black text-white p-3 rounded-lg"
+              <button
+                className="bg-black text-white py-3 px-4 rounded-lg"
                 onClick={() => {
-                  cartItems.find((row) => row.id === item.id) === undefined ||
+                  cartItems?.find((row) => row.id === item.id) === undefined ||
                   +cartItems?.filter((row) => row.id === item.id)[0]?.count <
                     +item.in_Stock
                     ? addToCart(item.id)

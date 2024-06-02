@@ -9,16 +9,18 @@ import Footer from "@/components/Footer";
 import Information from "@/components/Information";
 import SideBar from "@/components/SideBar";
 
-function Category() {
+function Size() {
   const params = useParams();
-  const [categoryData, setCategoryData] = useState([]);
+  const [sizeData, setSizeData] = useState([]);
 
   useEffect(() => {
     fetch(`https://6638e1b44253a866a24f88d2.mockapi.io/products`)
       .then((Response) => Response.json())
       .then((Result) =>
-        setCategoryData(
-          Result.filter((item) => item.category === params.category)
+        setSizeData(
+          Result.map((item) =>
+            item.size.filter((color) => color.size === params.size)
+          )
         )
       )
       .catch((err) => console.log(err));
@@ -34,9 +36,8 @@ function Category() {
             <aside className="w-[300px]">
               <SideBar />
             </aside>
-
             <main className="max-sm:my-5 flex flex-wrap items-center  justify-around gap-2">
-              {categoryData.map((data) => {
+              {sizeData.map((data) => {
                 return (
                   <Link href={`/products/${data.id}`}>
                     <div className="bg-[#c5c5c5] w-[280px] sm:w-[250px] h-[450px] sm:h-[400px] flex p-5 flex-col items-center rounded-lg text-center">
@@ -58,10 +59,9 @@ function Category() {
           <Information />
           <Footer />
         </>
-        {/* {console.log(categoryData)} */}
       </div>
     </>
   );
 }
 
-export default Category;
+export default Size;

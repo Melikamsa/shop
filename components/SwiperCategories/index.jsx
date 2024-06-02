@@ -6,6 +6,7 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import Link from "next/link";
 import Image from "next/image";
+import "@/styles/components/SwiperCategories.scss";
 
 export default function SwiperCategories() {
   return (
@@ -19,7 +20,7 @@ export default function SwiperCategories() {
         modules={[Pagination]}
         className="text-center px-5 py-11"
       >
-        <SwiperSlide className="sm:bg-zinc-400 rounded-lg sm:p-2 md:text-xl xl:text-2xl xl:p-7">
+        <SwiperSlide className="slider sm:p-2 xl:p-7">
           <Link href="/categoreis/jean">
             <Image
               className="mb-2 rounded-lg"
@@ -32,7 +33,7 @@ export default function SwiperCategories() {
           </Link>
         </SwiperSlide>
 
-        <SwiperSlide className="sm:bg-zinc-400 rounded-lg sm:p-2 md:text-xl xl:text-2xl xl:p-7">
+        <SwiperSlide className="slider sm:p-2 xl:p-7">
           <Link href="/categoreis/boot">
             <Image
               className="mb-2 rounded-lg"
@@ -45,7 +46,7 @@ export default function SwiperCategories() {
           </Link>
         </SwiperSlide>
 
-        <SwiperSlide className="sm:bg-zinc-400 rounded-lg sm:p-2 md:text-xl xl:text-2xl xl:p-7">
+        <SwiperSlide className="slider sm:p-2 xl:p-7">
           <Link href="/categoreis/bag">
             <Image
               className="mb-2 rounded-lg"
@@ -58,7 +59,7 @@ export default function SwiperCategories() {
           </Link>
         </SwiperSlide>
 
-        <SwiperSlide className="sm:bg-zinc-400 rounded-lg sm:p-2 md:text-xl xl:text-2xl xl:p-7">
+        <SwiperSlide className="slider sm:p-2 xl:p-7">
           <Link href="/categoreis/Belts">
             <Image
               className="mb-2 rounded-lg"
@@ -71,7 +72,7 @@ export default function SwiperCategories() {
           </Link>
         </SwiperSlide>
 
-        <SwiperSlide className="sm:bg-zinc-400 rounded-lg sm:p-2 md:text-xl xl:text-2xl xl:p-7">
+        <SwiperSlide className="slider sm:p-2 xl:p-7">
           <Link href="/categoreis/women">
             <Image
               className="mb-2 rounded-lg"
@@ -84,7 +85,7 @@ export default function SwiperCategories() {
           </Link>
         </SwiperSlide>
 
-        <SwiperSlide className="sm:bg-zinc-400 rounded-lg sm:p-2 md:text-xl xl:text-2xl xl:p-7">
+        <SwiperSlide className="slider sm:p-2 xl:p-7">
           <Link href="/categoreis/jewellery">
             <Image
               className="mb-2 rounded-lg"
@@ -97,7 +98,7 @@ export default function SwiperCategories() {
           </Link>
         </SwiperSlide>
 
-        <SwiperSlide className="sm:bg-zinc-400 rounded-lg sm:p-2 md:text-xl xl:text-2xl xl:p-7">
+        <SwiperSlide className="slider sm:p-2 xl:p-7">
           <Link href="/categoreis/Bracelets">
             <Image
               className="mb-2 rounded-lg"
@@ -110,7 +111,7 @@ export default function SwiperCategories() {
           </Link>
         </SwiperSlide>
 
-        <SwiperSlide className="sm:bg-zinc-400 rounded-lg sm:p-2 md:text-xl xl:text-2xl xl:p-7">
+        <SwiperSlide className="slider sm:p-2 xl:p-7">
           <Link href="/categoreis/hat">
             <Image
               className="mb-2 rounded-lg"
@@ -123,7 +124,7 @@ export default function SwiperCategories() {
           </Link>
         </SwiperSlide>
 
-        <SwiperSlide className="sm:bg-zinc-400 rounded-lg sm:p-2 md:text-xl xl:text-2xl xl:p-7">
+        <SwiperSlide className="slider sm:p-2 xl:p-7">
           <Link href="/categoreis/Sandal">
             <Image
               className="mb-2 rounded-lg"

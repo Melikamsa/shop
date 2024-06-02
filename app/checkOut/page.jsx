@@ -18,7 +18,7 @@ const CheckOut = () => {
 
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       <h2>welcome to check out</h2>
 
       <div>
@@ -30,7 +30,7 @@ const CheckOut = () => {
           .map((item) => console.log(item))}
       </div>
 
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

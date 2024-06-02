@@ -30,8 +30,8 @@ const Products = () => {
         <main className="max-sm:my-5 flex flex-wrap items-center  justify-around gap-2">
           {product.map((data) => {
             return (
-              <Link href={`/products/${data.id}`}>
-                <div className="bg-[#c5c5c5] w-[280px] sm:w-[250px] h-[450px] sm:h-[400px] flex p-5 flex-col items-center rounded-lg text-center">
+              <Link key={data.id} href={`/products/${data.id}`}>
+                <div className="bg-[#737373] w-[280px] sm:w-[250px] h-[450px] sm:h-[400px] flex p-5 flex-col items-center rounded-lg text-center">
                   <Image
                     className="rounded-lg"
                     width={250}

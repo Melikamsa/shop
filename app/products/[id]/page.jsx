@@ -44,10 +44,9 @@ const product = () => {
             {item.colors
               ? Object.values(item?.colors).map((colors) => {
                   return (
-                    <button
-                      style={{ backgroundColor: colors }}
-                      className="border-2 border-black p-3 rounded-md"
-                    ></button>
+                    <span className="border-2 border-black px-2 m-2 rounded-md cursor-pointer">
+                      {colors}
+                    </span>
                   );
                 })
               : " - "}
@@ -77,7 +76,6 @@ const product = () => {
                       +item.in_Stock
                       ? addToCart(item.id)
                       : console.log(item.id);
-                    // console.log(item.in_Stock);
                   }}
                 >
                   <FaPlus />

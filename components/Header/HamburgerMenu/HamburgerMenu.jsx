@@ -13,7 +13,7 @@ const HamburgerMenu = ({ setShow }) => {
 
   return (
     <section className="md:hidden z-10">
-      <div className="p-[30px] w-[80%] h-screen fixed top-0 left-0 bg-gray-400">
+      <div className="p-[30px] w-[80%] h-screen fixed top-0 left-0 bg-[#737373]">
         <button
           className="text-2xl mb-3 text-black"
           onClick={() => setShow(false)}

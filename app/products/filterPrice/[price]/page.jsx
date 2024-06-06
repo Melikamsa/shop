@@ -9,19 +9,15 @@ import Footer from "@/components/Footer";
 import Information from "@/components/Information";
 import SideBar from "@/components/SideBar";
 
-function ColorsText() {
+function Price() {
   const params = useParams();
-  const [colorData, setColorData] = useState([]);
+  const [priceData, setPriceData] = useState([]);
 
   useEffect(() => {
     fetch(`https://6638e1b44253a866a24f88d2.mockapi.io/products`)
       .then((Response) => Response.json())
       .then((Result) =>
-        setColorData(
-          Result.filter((item) =>
-            item.colorsText.some((color) => color === params.colorsText)
-          )
-        )
+        setPriceData(Result.filter((item) => item.price === params.price))
       )
       .catch((err) => console.log(err));
   }, [params]);
@@ -31,16 +27,17 @@ function ColorsText() {
       <div>
         <>
           <Header />
-{console.log(params)}
+
           <section className="m-2 sm:m-3 max-sm:flex-col flex max-sm:items-center sm:justify-between gap-5">
             <aside className="w-[300px]">
               <SideBar />
             </aside>
+
             <main className="max-sm:my-5 flex flex-wrap items-center  justify-around gap-2">
-              {colorData.map((data) => {
+              {priceData.map((data) => {
                 return (
                   <Link href={`/products/${data.id}`}>
-                    <div className="bg-[#c5c5c5] w-[280px] sm:w-[250px] h-[450px] sm:h-[400px] flex p-5 flex-col items-center rounded-lg text-center">
+                    <div className="bg-[#737373] w-[280px] sm:w-[250px] h-[450px] sm:h-[400px] flex p-5 flex-col items-center rounded-lg text-center">
                       <Image
                         className="rounded-lg"
                         width={250}
@@ -64,4 +61,4 @@ function ColorsText() {
   );
 }
 
-export default ColorsText;
+export default Price;

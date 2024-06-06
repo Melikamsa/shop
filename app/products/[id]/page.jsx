@@ -44,8 +44,11 @@ const product = () => {
             {item.colors
               ? Object.values(item?.colors).map((colors) => {
                   return (
-                    <span className="border-2 border-black px-2 m-2 rounded-md cursor-pointer">
-                      {colors}
+                    <span
+                      className="border-2 border-black mb-2 p-[12px] rounded-md cursor-pointer"
+                      style={{ backgroundColor: colors }}
+                    >
+                      {/* {colors} */}
                     </span>
                   );
                 })

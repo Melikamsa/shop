@@ -5,8 +5,9 @@ import Link from "next/link";
 import { PiCaretDownBold } from "react-icons/pi";
 import Accordion from "../Accordion";
 import Slider from "@mui/material/Slider";
+import ColorsText from "@/app/products/filterColor/[colorsText]/page";
 
-const SideBar = () => {
+const SideBar = ({ handleFilters, setHandleFilters }) => {
   const [showcategories, setShowcategories] = useState(false);
   const [showPrice, setShowPrice] = useState(false);
   const [showColor, setShowColor] = useState(false);
@@ -15,6 +16,13 @@ const SideBar = () => {
 
   function handleChanges(event, newValue) {
     setRange(newValue);
+  }
+
+  function rangePrice() {
+    let min = range[0];
+    let max = range[1];
+    setHandleFilters({ ...handleFilters, price: { min: min, max: max } });
+    console.log(min, max);
   }
 
   return (
@@ -40,33 +48,78 @@ const SideBar = () => {
           >
             {showcategories ? (
               <ul className="subset">
-                <Link href="/products/filterCategory/jean">
-                  <li>Jean</li>
-                </Link>
-                <Link href="/products/filterCategory/boot">
-                  <li>boot</li>
-                </Link>
-                <Link href="/products/filterCategory/bag">
-                  <li>bag</li>
-                </Link>
-                <Link href="/products/filterCategory/Belts">
-                  <li>Belts</li>
-                </Link>
-                <Link href="/products/filterCategory/women">
-                  <li>women</li>
-                </Link>
-                <Link href="/products/filterCategory/jewellery">
-                  <li>jewellery</li>
-                </Link>
-                <Link href="/products/filterCategory/Bracelets">
-                  <li>Bracelets</li>
-                </Link>
-                <Link href="/products/filterCategory/hat">
-                  <li>hat</li>
-                </Link>
-                <Link href="/products/filterCategory/Sandal">
-                  <li>Sandal</li>
-                </Link>
+                <li
+                  onClick={() => {
+                    return setHandleFilters({
+                      ...handleFilters,
+                      category: "jean",
+                    });
+                  }}
+                >
+                  Jean
+                </li>
+                <li
+                  onClick={() =>
+                    setHandleFilters({ ...handleFilters, category: "boot" })
+                  }
+                >
+                  boot
+                </li>
+                <li
+                  onClick={() =>
+                    setHandleFilters({ ...handleFilters, category: "bag" })
+                  }
+                >
+                  bag
+                </li>
+                <li
+                  onClick={() =>
+                    setHandleFilters({ ...handleFilters, category: "Belts" })
+                  }
+                >
+                  Belts
+                </li>
+                <li
+                  onClick={() =>
+                    setHandleFilters({ ...handleFilters, category: "women" })
+                  }
+                >
+                  women
+                </li>
+                <li
+                  onClick={() =>
+                    setHandleFilters({
+                      ...handleFilters,
+                      category: "jewellery",
+                    })
+                  }
+                >
+                  jewellery
+                </li>
+                <li
+                  onClick={() =>
+                    setHandleFilters({
+                      ...handleFilters,
+                      category: "Bracelets",
+                    })
+                  }
+                >
+                  Bracelets
+                </li>
+                <li
+                  onClick={() =>
+                    setHandleFilters({ ...handleFilters, category: "hat" })
+                  }
+                >
+                  hat
+                </li>
+                <li
+                  onClick={() =>
+                    setHandleFilters({ ...handleFilters, category: "Sandal" })
+                  }
+                >
+                  Sandal
+                </li>
               </ul>
             ) : null}
           </Accordion>
@@ -80,6 +133,7 @@ const SideBar = () => {
                 onClick={() => {
                   setShowPrice(true);
                   console.log("price");
+                  rangePrice();
                 }}
                 className="my-3 headerList"
               >
@@ -130,66 +184,179 @@ const SideBar = () => {
           >
             {showColor ? (
               <ul className="subset">
-                <Link href="/products/filterColor/white">
-                  <li>white</li>
-                </Link>
-                <Link href="/products/filterColor/RoyalBlue">
-                  <li>RoyalBlue</li>
-                </Link>
-                <Link href="/products/filterColor/LightSkyBlue">
-                  <li>LightSkyBlue</li>
-                </Link>
-                <Link href="/products/filterColor/darkBlue">
-                  <li>darkBlue</li>
-                </Link>
-                <Link href="/products/filterColor/blueNavy">
-                  <li>blueNavy</li>
-                </Link>
-                <Link href="/products/filterColor/black">
-                  <li>black</li>
-                </Link>
-                <Link href="/products/filterColor/brown">
-                  <li>brown</li>
-                </Link>
-                <Link href="/products/filterColor/golden">
-                  <li>golden</li>
-                </Link>
-                <Link href="/products/filterColor/silver">
-                  <li>silver</li>
-                </Link>
-                <Link href="/products/filterColor/Cyan">
-                  <li>Cyan</li>
-                </Link>
-                <Link href="/products/filterColor/pink">
-                  <li>pink</li>
-                </Link>
-                <Link href="/products/filterColor/green">
-                  <li>green</li>
-                </Link>
-                <Link href="/products/filterColor/wheat">
-                  <li>wheat</li>
-                </Link>
-                <Link href="/products/filterColor/leopard">
-                  <li>leopard</li>
-                </Link>
-                <Link href="/products/filterColor/peru">
-                  <li>peru</li>
-                </Link>
-                <Link href="/products/filterColor/cornFlowerBlue">
-                  <li>cornFlowerBlue</li>
-                </Link>
-                <Link href="/products/filterColor/midnightblue">
-                  <li>midnightblue</li>
-                </Link>
-                <Link href="/products/filterColor/BurntBrown">
-                  <li>BurntBrown</li>
-                </Link>
-                <Link href="/products/filterColor/BrickColor">
-                  <li>BrickColor</li>
-                </Link>
-                <Link href="/products/filterColor/steelBlue">
-                  <li>steelBlue</li>
-                </Link>
+                <li
+                  onClick={() =>
+                    setHandleFilters({ ...handleFilters, colorsText: "white" })
+                  }
+                >
+                  white
+                </li>
+                <li
+                  onClick={() =>
+                    setHandleFilters({
+                      ...handleFilters,
+                      colorsText: "RoyalBlue",
+                    })
+                  }
+                >
+                  RoyalBlue
+                </li>
+                <li
+                  onClick={() =>
+                    setHandleFilters({
+                      ...handleFilters,
+                      colorsText: "LightSkyBlue",
+                    })
+                  }
+                >
+                  LightSkyBlue
+                </li>
+                <li
+                  onClick={() =>
+                    setHandleFilters({
+                      ...handleFilters,
+                      colorsText: "darkBlue",
+                    })
+                  }
+                >
+                  darkBlue
+                </li>
+                <li
+                  onClick={() =>
+                    setHandleFilters({
+                      ...handleFilters,
+                      colorsText: "blueNavy",
+                    })
+                  }
+                >
+                  blueNavy
+                </li>
+                <li
+                  onClick={() =>
+                    setHandleFilters({
+                      ...handleFilters,
+                      colorsText: "black",
+                    })
+                  }
+                >
+                  black
+                </li>
+                <li
+                  onClick={() =>
+                    setHandleFilters({ ...handleFilters, colorsText: "brown" })
+                  }
+                >
+                  brown
+                </li>
+                <li
+                  onClick={() =>
+                    setHandleFilters({ ...handleFilters, colorsText: "golden" })
+                  }
+                >
+                  golden
+                </li>
+                <li
+                  onClick={() =>
+                    setHandleFilters({ ...handleFilters, colorsText: "silver" })
+                  }
+                >
+                  silver
+                </li>
+                <li
+                  onClick={() =>
+                    setHandleFilters({ ...handleFilters, colorsText: "Cyan" })
+                  }
+                >
+                  Cyan
+                </li>
+                <li
+                  onClick={() =>
+                    setHandleFilters({ ...handleFilters, colorsText: "pink" })
+                  }
+                >
+                  pink
+                </li>
+                <li
+                  onClick={() =>
+                    setHandleFilters({ ...handleFilters, colorsText: "green" })
+                  }
+                >
+                  green
+                </li>
+                <li
+                  onClick={() =>
+                    setHandleFilters({ ...handleFilters, colorsText: "wheat" })
+                  }
+                >
+                  wheat
+                </li>
+                <li
+                  onClick={() =>
+                    setHandleFilters({
+                      ...handleFilters,
+                      colorsText: "leopard",
+                    })
+                  }
+                >
+                  leopard
+                </li>
+                <li
+                  onClick={() =>
+                    setHandleFilters({ ...handleFilters, colorsText: "peru" })
+                  }
+                >
+                  peru
+                </li>
+                <li
+                  onClick={() =>
+                    setHandleFilters({
+                      ...handleFilters,
+                      colorsText: "cornFlowerBlue",
+                    })
+                  }
+                >
+                  cornFlowerBlue
+                </li>
+                <li
+                  onClick={() =>
+                    setHandleFilters({
+                      ...handleFilters,
+                      colorsText: "midnightblue",
+                    })
+                  }
+                >
+                  midnightblue
+                </li>
+                <li
+                  onClick={() =>
+                    setHandleFilters({
+                      ...handleFilters,
+                      colorsText: "BurntBrown",
+                    })
+                  }
+                >
+                  BurntBrown
+                </li>
+                <li
+                  onClick={() =>
+                    setHandleFilters({
+                      ...handleFilters,
+                      colorsText: "BrickColor",
+                    })
+                  }
+                >
+                  BrickColor
+                </li>
+                <li
+                  onClick={() =>
+                    setHandleFilters({
+                      ...handleFilters,
+                      colorsText: "steelBlue",
+                    })
+                  }
+                >
+                  steelBlue
+                </li>
               </ul>
             ) : null}
           </Accordion>
@@ -215,42 +382,91 @@ const SideBar = () => {
           >
             {showSize ? (
               <ul className="subset">
-                <Link href="/products/filterSize/2xl">
-                  <li className="box">2xl</li>
-                </Link>
-                <Link href="/products/filterSize/xl">
-                  <li>xl</li>
-                </Link>
-                <Link href="/products/filterSize/l">
-                  <li>l</li>
-                </Link>
-                <Link href="/products/filterSize/s">
-                  <li>s</li>
-                </Link>
-                <Link href="/products/filterSize/m">
-                  <li>m</li>
-                </Link>
-                <Link href="/products/filterSize/35">
-                  <li>35</li>
-                </Link>
-                <Link href="/products/filterSize/37">
-                  <li>37</li>
-                </Link>
-                <Link href="/products/filterSize/38">
-                  <li>38</li>
-                </Link>
-                <Link href="/products/filterSize/39">
-                  <li>39</li>
-                </Link>
-                <Link href="/products/filterSize/40">
-                  <li>40</li>
-                </Link>
-                <Link href="/products/filterSize/41">
-                  <li>41</li>
-                </Link>
-                <Link href="/products/filterSize/42">
-                  <li>42</li>
-                </Link>
+                <li
+                  className="box"
+                  onClick={() =>
+                    setHandleFilters({ ...handleFilters, size: "2xl" })
+                  }
+                >
+                  2xl
+                </li>
+                <li
+                  onClick={() =>
+                    setHandleFilters({ ...handleFilters, size: "xl" })
+                  }
+                >
+                  xl
+                </li>
+                <li
+                  onClick={() =>
+                    setHandleFilters({ ...handleFilters, size: "l" })
+                  }
+                >
+                  l
+                </li>
+                <li
+                  onClick={() =>
+                    setHandleFilters({ ...handleFilters, size: "s" })
+                  }
+                >
+                  s
+                </li>
+                <li
+                  onClick={() =>
+                    setHandleFilters({ ...handleFilters, size: "m" })
+                  }
+                >
+                  m
+                </li>
+                <li
+                  onClick={() =>
+                    setHandleFilters({ ...handleFilters, size: "35" })
+                  }
+                >
+                  35
+                </li>
+                <li
+                  onClick={() =>
+                    setHandleFilters({ ...handleFilters, size: "37" })
+                  }
+                >
+                  37
+                </li>
+                <li
+                  onClick={() =>
+                    setHandleFilters({ ...handleFilters, size: "38" })
+                  }
+                >
+                  38
+                </li>
+                <li
+                  onClick={() =>
+                    setHandleFilters({ ...handleFilters, size: "39" })
+                  }
+                >
+                  39
+                </li>
+                <li
+                  onClick={() =>
+                    setHandleFilters({ ...handleFilters, size: "40" })
+                  }
+                >
+                  40
+                </li>
+                <li
+                  onClick={() =>
+                    setHandleFilters({ ...handleFilters, size: "41" })
+                  }
+                >
+                  41
+                </li>
+                <li
+                  onClick={() =>
+                    setHandleFilters({ ...handleFilters, size: "42" })
+                  }
+                >
+                  42
+                </li>
               </ul>
             ) : null}
           </Accordion>

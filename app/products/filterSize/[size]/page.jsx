@@ -18,8 +18,8 @@ function Size() {
       .then((Response) => Response.json())
       .then((Result) =>
         setSizeData(
-          Result.map((item) =>
-            item.size.filter((color) => color.size === params.size)
+          Result.filter((item) =>
+            item.size?.some((sizeItem) => sizeItem === params.size)
           )
         )
       )

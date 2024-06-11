@@ -47,9 +47,7 @@ const product = () => {
                     <span
                       className="border-2 border-black mb-2 p-[12px] rounded-md cursor-pointer"
                       style={{ backgroundColor: colors }}
-                    >
-                      {/* {colors} */}
-                    </span>
+                    ></span>
                   );
                 })
               : " - "}

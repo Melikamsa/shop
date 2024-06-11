@@ -1,0 +1,21 @@
+@layer component {
+  .boxLogin {
+    @apply lg:w-[800px] xl:text-xl flex flex-col gap-8 sm:w-[600px];
+  }
+
+  .headerText {
+    @apply flex items-center gap-3;
+  }
+
+  .formInLogin {
+    @apply flex flex-col;
+  }
+
+  .inputLogin {
+    @apply bg-white rounded-md;
+  }
+
+  .boxInfo {
+    @apply flex justify-between;
+  }
+}

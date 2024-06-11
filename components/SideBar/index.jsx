@@ -16,11 +16,8 @@ const SideBar = ({ handleFilters, setHandleFilters }) => {
 
   function handleChanges(event, newValue) {
     setRange(newValue);
-  }
-
-  function rangePrice() {
-    let min = range[0];
-    let max = range[1];
+    let min = newValue[0];
+    let max = newValue[1];
     setHandleFilters({ ...handleFilters, price: { min: min, max: max } });
     console.log(min, max);
   }
@@ -133,7 +130,7 @@ const SideBar = ({ handleFilters, setHandleFilters }) => {
                 onClick={() => {
                   setShowPrice(true);
                   console.log("price");
-                  rangePrice();
+                  // rangePrice();
                 }}
                 className="my-3 headerList"
               >
@@ -154,6 +151,8 @@ const SideBar = ({ handleFilters, setHandleFilters }) => {
                 }}
               >
                 <Slider
+                  min={1}
+                  max={1000}
                   value={range}
                   onChange={handleChanges}
                   valueLabelDisplay="auto"

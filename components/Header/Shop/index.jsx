@@ -5,31 +5,31 @@ const Shop = () => {
   return (
     <div className="p-3 rounded-lg bg-black text-white absolute">
       <ul className="flex flex-col gap-4">
-        <Link href="/categoreis/jean">
+        <Link href="/products?category=jean">
           <li>Jean</li>
         </Link>
-        <Link href="/categoreis/boot">
+        <Link href="/products?category=boot">
           <li>boot</li>
         </Link>
-        <Link href="/categoreis/bag">
+        <Link href="/products?category=bag">
           <li>bag</li>
         </Link>
-        <Link href="/categoreis/Belts">
+        <Link href="/products?category=Belts">
           <li>Belts</li>
         </Link>
-        <Link href="/categoreis/women">
+        <Link href="/products?category=women">
           <li>women</li>
         </Link>
-        <Link href="/categoreis/jewellery">
+        <Link href="/products?category=jewellery">
           <li>jewellery</li>
         </Link>
-        <Link href="/categoreis/Bracelets">
+        <Link href="/products?category=Bracelets">
           <li>Bracelets</li>
         </Link>
-        <Link href="/categoreis/hat">
+        <Link href="/products?category=hat">
           <li>hat</li>
         </Link>
-        <Link href="/categoreis/Sandal">
+        <Link href="/products?category=Sandal">
           <li>Sandal</li>
         </Link>
       </ul>

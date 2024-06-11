@@ -21,7 +21,7 @@ export default function SwiperCategories() {
         className="text-center px-5 py-11"
       >
         <SwiperSlide className="slider sm:p-2 xl:p-7">
-          <Link href="/categoreis/jean">
+          <Link href="/products?category=jean">
             <Image
               className="mb-2 rounded-lg"
               alt="img"
@@ -34,7 +34,7 @@ export default function SwiperCategories() {
         </SwiperSlide>
 
         <SwiperSlide className="slider sm:p-2 xl:p-7">
-          <Link href="/categoreis/boot">
+          <Link href="/products?category=boot">
             <Image
               className="mb-2 rounded-lg"
               alt="img"
@@ -47,7 +47,7 @@ export default function SwiperCategories() {
         </SwiperSlide>
 
         <SwiperSlide className="slider sm:p-2 xl:p-7">
-          <Link href="/categoreis/bag">
+          <Link href="/products?category=bag">
             <Image
               className="mb-2 rounded-lg"
               alt="img"
@@ -60,7 +60,7 @@ export default function SwiperCategories() {
         </SwiperSlide>
 
         <SwiperSlide className="slider sm:p-2 xl:p-7">
-          <Link href="/categoreis/Belts">
+          <Link href="/products?category=Belts">
             <Image
               className="mb-2 rounded-lg"
               alt="img"
@@ -73,7 +73,7 @@ export default function SwiperCategories() {
         </SwiperSlide>
 
         <SwiperSlide className="slider sm:p-2 xl:p-7">
-          <Link href="/categoreis/women">
+          <Link href="/products?category=women">
             <Image
               className="mb-2 rounded-lg"
               alt="img"
@@ -86,7 +86,7 @@ export default function SwiperCategories() {
         </SwiperSlide>
 
         <SwiperSlide className="slider sm:p-2 xl:p-7">
-          <Link href="/categoreis/jewellery">
+          <Link href="/products?category=jewellery">
             <Image
               className="mb-2 rounded-lg"
               alt="img"
@@ -99,7 +99,7 @@ export default function SwiperCategories() {
         </SwiperSlide>
 
         <SwiperSlide className="slider sm:p-2 xl:p-7">
-          <Link href="/categoreis/Bracelets">
+          <Link href="/products?category=Bracelets">
             <Image
               className="mb-2 rounded-lg"
               alt="img"
@@ -112,7 +112,7 @@ export default function SwiperCategories() {
         </SwiperSlide>
 
         <SwiperSlide className="slider sm:p-2 xl:p-7">
-          <Link href="/categoreis/hat">
+          <Link href="/products?category=hat">
             <Image
               className="mb-2 rounded-lg"
               alt="img"
@@ -125,7 +125,7 @@ export default function SwiperCategories() {
         </SwiperSlide>
 
         <SwiperSlide className="slider sm:p-2 xl:p-7">
-          <Link href="/categoreis/Sandal">
+          <Link href="/products?category=Sandal">
             <Image
               className="mb-2 rounded-lg"
               alt="img"

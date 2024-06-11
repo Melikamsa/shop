@@ -7,8 +7,10 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Information from "@/components/Information";
 import SideBar from "@/components/SideBar";
+import { useSearchParams } from "next/navigation";
 
 const Products = () => {
+  const searchParams = useSearchParams();
   const [product, setProduct] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
 
@@ -18,6 +20,15 @@ const Products = () => {
     price: { min: null, max: null },
     category: null,
   });
+
+  useEffect(() => {
+    if (searchParams.get("category")) {
+      setHandleFilters({
+        ...handleFilters,
+        category: searchParams.get("category"),
+      });
+    }
+  }, [searchParams]);
 
   useEffect(() => {
     fetch("https://6638e1b44253a866a24f88d2.mockapi.io/products")
@@ -55,7 +66,8 @@ const Products = () => {
     if (handleFilters.price.min && handleFilters.price.max) {
       temp = temp.filter((item) => {
         return (
-          item.price >= handleFilters.min && item.price <= handleFilters.max
+          +item.price >= handleFilters.price.min &&
+          +item.price <= handleFilters.price.max
         );
       });
     }
@@ -68,6 +80,7 @@ const Products = () => {
   return (
     <>
       <Header />
+      {console.log(searchParams)}
       {console.log(filteredProducts)}
       <section className="m-2 sm:m-3 max-sm:flex-col flex max-sm:items-center sm:justify-between gap-5">
         <aside className="w-[300px]">

@@ -65,20 +65,20 @@ const Footer = () => {
                 </div>
               }
             >
-              <ul className="minItems">
-                <li>
+              <ul className="minItems ">
+                <li className="liFooter">
                   <Link href="/">my account</Link>
                 </li>
-                <li>
+                <li className="liFooter">
                   <Link href="/">login</Link>
                 </li>
-                <li>
+                <li className="liFooter">
                   <Link href="/">my cart</Link>
                 </li>
-                <li>
+                <li className="liFooter">
                   <Link href="/">ma wishlist</Link>
                 </li>
-                <li>
+                <li className="liFooter">
                   <Link href="/">chwckout</Link>
                 </li>
               </ul>
@@ -86,26 +86,26 @@ const Footer = () => {
           </section>
 
           <section className="max-lg:hidden">
-            <div className="mb-4 titlesBoxTowAndThree ">
+            <div className="titlesBoxTowAndThree">
               <p className="titles">information</p>
               <span className="icon mt-2">
                 <GrDown />
               </span>
             </div>
             <ul className="maxItems">
-              <li>
+              <li className="liFooter">
                 <Link href="/">my account</Link>
               </li>
-              <li>
+              <li className="liFooter">
                 <Link href="/">login</Link>
               </li>
-              <li>
+              <li className="liFooter">
                 <Link href="/">my cart</Link>
               </li>
-              <li>
+              <li className="liFooter">
                 <Link href="/">mawishlist</Link>
               </li>
-              <li>
+              <li className="liFooter">
                 <Link href="/">chwckout</Link>
               </li>
             </ul>
@@ -128,19 +128,19 @@ const Footer = () => {
               }
             >
               <ul className="minItems lg:hidden">
-                <li>
+                <li className="liFooter">
                   <Link href="/">about us</Link>
                 </li>
-                <li>
+                <li className="liFooter">
                   <Link href="/">careers</Link>
                 </li>
-                <li>
+                <li className="liFooter">
                   <Link href="/">delivery information</Link>
                 </li>
-                <li>
+                <li className="liFooter">
                   <Link href="/">privacy policy</Link>
                 </li>
-                <li>
+                <li className="liFooter">
                   <Link href="/">terms & conditions</Link>
                 </li>
               </ul>
@@ -155,19 +155,19 @@ const Footer = () => {
               </span>
             </div>
             <ul className="maxItems">
-              <li>
+              <li className="liFooter">
                 <Link href="/">about us</Link>
               </li>
-              <li>
+              <li className="liFooter">
                 <Link href="/">careers</Link>
               </li>
-              <li>
+              <li className="liFooter">
                 <Link href="/">delivery information</Link>
               </li>
-              <li>
+              <li className="liFooter">
                 <Link href="/">privacy policy</Link>
               </li>
-              <li>
+              <li className="liFooter">
                 <Link href="/">terms & conditions</Link>
               </li>
             </ul>

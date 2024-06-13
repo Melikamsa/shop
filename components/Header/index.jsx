@@ -1,13 +1,12 @@
 "use client";
-import { GoSearch, GoHeart } from "react-icons/go";
-import { PiShoppingBag, PiListBold, PiCaretDownBold } from "react-icons/pi";
-import HamburgerMenu from "./HamburgerMenu/HamburgerMenu";
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import HamburgerMenu from "./HamburgerMenu/HamburgerMenu";
 import Shop from "./Shop";
-import { useState } from "react";
 import Accordion from "../Accordion";
 import "@/styles/components/Header.scss";
+import { PiShoppingBag, PiListBold, PiCaretDownBold } from "react-icons/pi";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -72,14 +71,6 @@ const Header = () => {
               <PiShoppingBag />
             </Link>
           </button>
-
-          <button>
-            <GoSearch />
-          </button>
-
-          <button>
-            <GoHeart />
-          </button>
         </div>
 
         <button
@@ -91,7 +82,7 @@ const Header = () => {
         {showMenu ? <HamburgerMenu setShow={setShowMenu} /> : null}
 
         <Link href="/login">
-          <button className="text-white bg-black pb-2 pt-1 px-5 lg:pb-4 lg:pt-2 lg:px-7 2xl:pb-5 2xl:pt-3 2xl:px-9 rounded-lg capitalize  lg:text-xl 2xl:text-2xl">
+          <button className="text-white bg-black pb-2 pt-1 px-5 lg:px-7 2xl:pb-5 2xl:pt-3 2xl:px-9 rounded-lg capitalize  lg:text-xl 2xl:text-2xl">
             login
           </button>
         </Link>

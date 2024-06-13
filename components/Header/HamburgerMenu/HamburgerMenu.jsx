@@ -48,7 +48,7 @@ const HamburgerMenu = ({ setShow }) => {
                     console.log("click shod");
                   }}
                 >
-                  <Link href="/">shop</Link>
+                  <Link href="/products">shop</Link>
                   <span className={`mt-1  ${showShop ? "-rotate-90" : ""}`}>
                     <PiCaretDownBold />
                   </span>

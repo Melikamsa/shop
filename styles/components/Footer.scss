@@ -12,7 +12,7 @@
   }
 
   .titlesBoxTowAndThree {
-    @apply w-[200px] flex items-center justify-between;
+    @apply w-[200px] flex items-center justify-between mb-4 ;
   }
 
   .titles {
@@ -20,11 +20,15 @@
   }
 
   .titlesBoxTowAndThree .icon {
-    @apply text-xl lg:hidden cursor-pointer;
+    @apply text-xl lg:hidden cursor-pointer  ;
   }
 
   .minItems {
-    @apply h-[225px] flex flex-col justify-between;
+    @apply h-[225px] flex flex-col justify-between ;
+  }
+
+  .liFooter{
+    @apply hover:text-[#737373]
   }
 
   .maxItems {

@@ -12,6 +12,6 @@
   }
 
   .header .left .icons {
-    @apply max-sm:hidden text-3xl 2xl:text-4xl flex items-center gap-2 lg:gap-3;
+    @apply text-3xl md:text-4xl lg:text-5xl flex items-center gap-1 lg:gap-3;
   }
 }

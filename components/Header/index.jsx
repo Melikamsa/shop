@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import HamburgerMenu from "./HamburgerMenu/HamburgerMenu";
@@ -7,10 +7,16 @@ import Shop from "./Shop";
 import Accordion from "../Accordion";
 import "@/styles/components/Header.scss";
 import { PiShoppingBag, PiListBold, PiCaretDownBold } from "react-icons/pi";
+import { ShopContext } from "../shopContext/page";
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [showShop, setShowShop] = useState(false);
+
+  const { cartItems } = useContext(ShopContext);
+  const itemCount = cartItems?.reduce((previous, current) => {
+    return previous + current.count;
+  }, 0);
 
   return (
     <section className="header py-5 px-3 lg:px-6">
@@ -66,6 +72,7 @@ const Header = () => {
 
       <section className="left ">
         <div className="icons ">
+          {itemCount > 0 && <span className="text-sm bg-black text-white px-[7px] rounded-xl">{itemCount}</span>}
           <button>
             <Link href="/checkOut">
               <PiShoppingBag />

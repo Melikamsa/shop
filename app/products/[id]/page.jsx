@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 import Information from "@/components/Information";
 import RelatedProducts from "@/components/RelatedProducts";
 import AddReview from "@/components/AddYourReview";
-import { ShopContext } from "@/app/shopContext/page";
+import { ShopContext } from "@/components/shopContext/page";
 
 const product = () => {
   const params = useParams();

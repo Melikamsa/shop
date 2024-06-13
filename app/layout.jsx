@@ -1,5 +1,5 @@
 "use client";
-import { ShopContextProvider } from "./shopContext/page";
+import { ShopContextProvider } from "../components/shopContext/page";
 // import CartProvider from "@/components/CartContext";
 const RootLayout = ({ children }) => {
   return (

@@ -9,7 +9,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import { ShopContext } from "../shopContext/page";
+import { ShopContext } from "../../components/shopContext/page";
 
 const CheckOut = () => {
   const { cartItems, setCartItems, addToCart, removeFromCart, deleteFromCart } =

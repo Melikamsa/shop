@@ -5,7 +5,6 @@ import Link from "next/link";
 import { PiCaretDownBold } from "react-icons/pi";
 import Accordion from "../Accordion";
 import Slider from "@mui/material/Slider";
-import ColorsText from "@/app/products/filterColor/[colorsText]/page";
 
 const SideBar = ({ handleFilters, setHandleFilters }) => {
   const [showcategories, setShowcategories] = useState(false);
